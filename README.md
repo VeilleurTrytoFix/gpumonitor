@@ -8,8 +8,8 @@ Template and script allow you to monitor multi gpu, tested on ubuntu 16.04, ETHO
 
 ### Installation
 
-Step 1 - Copy script into /etc/zabbix/scripts/get_gpus_info.sh 
-Step 2 - Add lines at the end of ZabbixAgent.conf 
+  - 1 Copy script into /etc/zabbix/scripts/get_gpus_info.sh 
+  - 2 Add lines at the end of ZabbixAgent.conf 
 
 ```sh
 #AMD GPU LINUX
@@ -18,8 +18,8 @@ UserParameter=gpu.temp[*],export DISPLAY=:0 && xhost + > /dev/null && amdconfig 
 UserParameter=gpu.utilization[*],export DISPLAY=:0 && xhost + > /dev/null  && amdconfig --adapter=$1 --odgc | grep 'GPU load' | cut -f1 -d'%' | cut -f2 -d':'| tr -d ' '
 UserParameter=gpu.number,show stats | grep "gpus:" | tr -s ' ' | cut -d ' ' -f 2
 ```
-Step 3 - Import Template into Zabbix 
-Step 4 - Put your Hosts into template 
+  - 3 Import Template into Zabbix 
+  - 4 Put your Hosts into template 
 
 #### Tip me a coffee if helpful
 | Currency | Addr |
