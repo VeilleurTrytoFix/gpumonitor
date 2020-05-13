@@ -24,7 +24,7 @@ UserParameter=gpu.number,show stats | grep "gpus:" | tr -s ' ' | cut -d ' ' -f 2
 #### Tip me a coffee if helpful
 | Currency | Addr |
 | ------ | ------ |
-| Bitcoin | 1HEULe96ey4amR62oDvnaqwgaY1aaJFpwx |
+| Bitcoin | 1JS7kMGc5MZYnNSdQanMdQrKY3BauCY9eS |
 
 Thanks to for source : https://github.com/plambe/zabbix-nvidia-smi-multi-gpu
 
